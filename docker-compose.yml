@@ -1,0 +1,11 @@
+services:
+  mqtt-client:
+    image: mqtt-webclient
+    container_name: mqtt-client
+    restart: always
+    ports:
+      - 8080:80
+    networks:
+      app-nw:
+        aliases:
+          - mqtt-client
